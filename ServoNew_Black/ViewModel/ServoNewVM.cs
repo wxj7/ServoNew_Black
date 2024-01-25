@@ -247,6 +247,7 @@ namespace ServoNew_Black.ViewModel
         public void StopReading()
         {
             _speedTimer?.Stop();
+            _speedTimer.Elapsed -= OnTimerElapsed;
             byte[] StartReadCommand = BulidMessage.BuildMessage(Address, FunctionCode.WriteSingle, 0x0002, 0x0000);
             byte[] resMessage;
             ServoNew.SendMessage(StartReadCommand);
