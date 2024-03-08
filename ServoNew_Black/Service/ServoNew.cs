@@ -55,7 +55,6 @@ namespace ServoNew_Black.Service
                         return false;
                     }
                 }
-
                 receivedData = receivedDatas;
                 return true;
             }
